@@ -1,0 +1,318 @@
+:root {
+    --color-text: #363636;
+    /* Couleur de texte pour le thème clair */
+    --color-background: #cecece;
+    /* Couleur de fond pour le thème clair */
+    --color-nav: #cecece;
+    /* Couleur de fond de la navbar pour le thème clair */
+    --color-dark-text: #f5f5f5;
+    /* Couleur de texte pour le thème sombre */
+    --color-dark-background: #282c34;
+    /* Couleur de fond pour le thème sombre */
+    --color-dark-nav: #222;
+    /* Couleur de fond de la navbar pour le thème sombre */
+    --color-background-hover: #e2e2e2;
+    /* Couleur de fond au survol pour le thème clair */
+    --color-hover: #363636;
+    /* Couleur de texte au survol pour le thème clair */
+    --color-dark-background-hover: #4a4a4a;
+    /* Couleur de fond au survol pour le thème sombre */
+    --color-dark-hover: #f5f5f5;
+}
+
+.is-dark-mode {
+    --color-text: var(--color-dark-text);
+    --color-background: var(--color-dark-background);
+    --color-nav: var(--color-dark-nav);
+    --color-hover: var(--color-dark-hover);
+    --color-background-hover: var(--color-dark-background-hover);
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar {
+    background-color: var(--color-nav);
+    transition: background-color 0.3s;
+}
+
+.navbar a {
+    color: var(--color-text);
+}
+
+
+/* Styles spécifiques pour le menu déroulant du burger en mode sombre */
+.navbar-menu {
+    background-color: var(--color-nav);
+    /* Change la couleur de fond du menu pour le thème sombre */
+}
+
+/* Styles spécifiques pour le burger lui-même en mode sombre */
+.navbar-burger span {
+    background-color: var(--color-nav);
+    /* Assure que les barres du burger sont visibles en mode sombre */
+}
+
+/* Si vous avez des éléments supplémentaires dans le burger qui nécessitent des ajustements de couleur */
+.navbar-burger .icon,
+.navbar-burger .button,
+.navbar-burger a,
+.navbar-burger span {
+    color: var(--color-text);
+    /* Change la couleur du texte/icones pour le thème sombre */
+}
+
+.navbar-burger span {
+    background-color: var(--color-text);
+    /* Change la couleur des barres du burger pour le thème sombre */
+}
+
+/* Styles de hover pour les liens en thème clair */
+.navbar a:hover,
+.navbar-burger:hover,
+.navbar-burger {
+    background-color: var(--color-background-hover);
+    /* Couleur de fond au survol pour le thème clair */
+    color: var(--color-hover);
+    /* Couleur de texte au survol pour le thème clair */
+}
+
+
+/* About Me section styles that respond to theme changes */
+.section#about-me {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Profile picture styles */
+.section#about-me .profile-picture img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add shadow to the image */
+}
+
+/* Content box styles */
+.section#about-me .content-box {
+    border: 1px solid transparent;
+    /* Add border - transparent by default */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Default light theme styles */
+.section#about-me,
+.section#about-me .title,
+.section#about-me .subtitle {
+    color: #363636;
+    /* Default text color for light theme */
+}
+
+.section#about-me .content-box {
+    background-color: #f5f5f5;
+    /* Lighter background for the content box to stand out */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for the content box */
+}
+
+
+/* Dark theme styles */
+.is-dark-mode .section#about-me {
+    background-color: var(--color-background);
+}
+
+/* Ici, tu peux ajouter des styles supplémentaires pour les éléments spécifiques en mode sombre */
+
+
+/* Dark theme styles */
+.is-dark-mode .section#about-me .subtitle {
+    color: white;
+    /* Couleur du texte pour le mode sombre */
+}
+
+.is-dark-mode .section#about-me .title {
+color: var(--color-text);
+    /* Couleur du titre pour le mode sombre */
+}
+
+/* Styles spécifiques pour le titre de la section Skills en thème sombre */
+.is-dark-mode #skills>.container>.title {
+    color: var(--color-text);
+    /* Couleur blanche pour le mode sombre */
+}
+
+.is-dark-mode .section#about-me .content-box {
+    background-color: #2a2a2a;
+    /* Arrière-plan plus foncé pour le cadre de contenu */
+    border-color: rgba(255, 255, 255, 0.1);
+    /* Bordure visible en mode sombre */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Ombre plus prononcée pour le mode sombre */
+}
+
+/* Dark theme styles for bold text */
+.is-dark-mode .section#about-me b,
+.is-dark-mode .section#about-me strong {
+    color: #ffcc00;
+    /* Couleur pour le texte en gras en mode sombre */
+}
+
+/* Default light theme styles */
+.section#about-me,
+.section#skills {
+    background-color: #ffffff;
+    /* Light theme background color */
+    color: #000000;
+    /* Light theme text color */
+}
+
+
+/* Dark theme styles */
+.is-dark-mode .section#about-me,
+.is-dark-mode .section#skills {
+    background-color: #282c34;
+    color: white;
+    /* Dark theme background color */
+}
+
+#skills .card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#skills .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#skills .progress {
+    margin-top: 10px;
+}
+
+
+/* Styles par défaut pour le thème clair */
+.footer {
+    background-color: #cecece;
+    /* ou la couleur de fond de votre thème clair */
+    color: #363636;
+    /* ou la couleur du texte de votre thème clair */
+}
+
+/* Styles spécifiques pour le thème sombre */
+.is-dark-mode .footer {
+    background-color: #222;
+    /* ou la couleur de fond de votre thème sombre */
+    color: #f5f5f5;
+    /* ou la couleur du texte de votre thème sombre */
+}
+
+.is-dark-mode .site-footer {
+    background-color: var(--color-background);
+}
+
+.section#projects {
+    background-color: #ffffff ;
+}
+.is-dark-mode .section#projects {
+    background-color: #282c34 ;
+}
+
+.is-dark-mode .section#projects h2,
+.is-dark-mode .section#projects a{
+    color: white;
+}
+
+  
+.section#projects h2,
+.section#projects a{
+    color: black;
+}
+
+.is-dark-mode .section#projects .tabs li.is-active a,
+.is-dark-mode .section#projects .tabs li:hover a{
+  background-color: #f5f5f5;
+  /* Couleur de fond pour l'état actif et au survol */
+  color: #363636;
+  /* Couleur du texte pour l'état actif et au survol */
+  border-radius: 6px;
+  /* Bordures arrondies pour les onglets */
+}
+
+
+.section#contact
+{
+    background-color: #ffffff ;
+}
+
+.is-dark-mode .section#contact
+{
+    background-color: #282c34 ;
+}
+
+/* Dark theme styles for bold text */
+.is-dark-mode .section#contact b,
+.is-dark-mode .section#contact strong {
+    color: #ffcc00;
+    /* Couleur pour le texte en gras en mode sombre */
+}
+
+.is-dark-mode .section#contact .title,
+.is-dark-mode .section#contact .subtitle {
+    color: white;
+    /* Couleur pour le texte en gras en mode sombre */
+}
+
+
+section#login{
+    background-color: #ffffff;
+}
+
+.is-dark-mode section#login{
+    background-color: #282c34;
+}
+
+.site-content{
+    background-color: #ffffff;
+}
+
+.is-dark-mode .site-content{
+    background-color: #282c34;
+}
+
+section#admin-dashboard h1{
+    color: black;
+}
+
+.is-dark-mode section#admin-dashboard h1{
+    color: white;
+}
+
+.is-dark-mode section#projectshow p
+{
+    color: white;
+}
+
+section#projectshow h1,
+section#projectshow h2,
+section#projectshow p{
+    color: black;
+}
+
+.is-dark-mode section#projectshow .box{
+    background-color: #363636;
+}
+
+section#projectshow .box{
+    background-color: #cecece;
+}
+
+
+.is-dark-mode section#projectshow b,
+.is-dark-mode section#projectshow  strong {
+    color: #ffcc00;
+    /* Couleur pour le texte en gras en mode sombre */
+}
+
+.is-dark-mode section#projectshow h1,
+.is-dark-mode section#projectshow h2{
+    color: #ffcc00;
+}

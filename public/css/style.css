@@ -1,0 +1,234 @@
+.site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-content {
+  flex: 1;
+  /* Remove padding if it's causing issues */
+}
+
+/* Styles généraux pour le pied de page */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  /* autres styles pour le pied de page */
+}
+
+/* Média query pour les appareils avec une largeur maximale de 768px, qui est généralement considérée comme une taille d'écran tablette/mobile */
+@media (max-width: 768px) {
+  footer {
+    padding: 0.5rem;
+    /* réduire le padding sur les appareils mobiles */
+    /* autres ajustements de style pour les appareils mobiles */
+  }
+}
+
+/* Définir l'animation */
+@keyframes anim-logo {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* Conteneur pour la photo de profil et le logo */
+.profile-container {
+  position: relative;
+  width: 128px;
+  /* ou la largeur de votre image et logo */
+  height: 128px;
+  /* ou la hauteur de votre image et logo */
+}
+
+/* Style pour la photo de profil */
+.profile-picture .profile-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  width: 128px;
+  /* ajustez selon la taille réelle de vos images */
+  height: 128px;
+  transition: transform 0.5s ease;
+}
+
+/* Style pour le logo */
+.profile-picture .profile-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 128px;
+  /* ajustez selon la taille réelle de vos images */
+  height: 128px;
+  transition: transform 0.5s ease;
+  border-radius: 50%;
+  animation: anim-logo 0.5s ease infinite alternate;
+}
+
+/* Animation sur hover */
+.profile-container:hover .profile-photo {
+  transform: translateX(55%);
+  /* déplace la photo vers la droite */
+}
+
+.profile-container:hover .profile-logo {
+  animation: none;
+  transform: translateX(-55%);
+  /* déplace le logo vers la gauche */
+}
+
+
+/* Swiper Custom Styles */
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  /* You can set your own size */
+  height: 300px;
+  /* Adjust the height as per your content */
+}
+
+/* Ensure the images fit well in the card */
+.swiper-slide .card-image img {
+  width: 100%;
+  height: auto;
+  /* or use 'cover' if you want to crop images */
+  object-fit: cover;
+  /* This will prevent stretching for images */
+}
+
+/* Style for the project title and description within the card */
+.card-content .title,
+.card-content .subtitle {
+  padding: 10px 0;
+}
+
+/* Navigation buttons style */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff;
+  /* Change the color as needed */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent background */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for the pagination */
+.swiper-pagination-bullet {
+  background: #fff;
+  opacity: 1;
+}
+
+/* Responsive breakpoints for different viewports */
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: 100%;
+    /* Full width slides on smaller screens */
+  }
+}
+
+/* Additional styles can be added as needed */
+
+/* Style des onglets pour le filtrage */
+.tabs {
+  overflow: hidden;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  margin-bottom: 2rem;
+  /* Espacement entre les onglets et les cartes */
+}
+
+.tabs ul {
+  border-bottom: none;
+  /* Retirer la bordure par défaut si nécessaire */
+}
+
+.tabs li {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tabs a {
+  color: #4a4a4a;
+  /* Couleur des liens */
+  padding: 0.75em 1em;
+  /* Ajuster l'espacement à l'intérieur des onglets */
+  border: none;
+  /* Si Bulma ajoute une bordure par défaut, la retirer */
+}
+
+
+.tabs li:not(.is-active) a:hover {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  /* Ombre légère au survol */
+}
+
+/* Ajouter un effet sur le curseur pour indiquer la possibilité de cliquer */
+.tabs a {
+  cursor: pointer;
+}
+
+
+.section#projetcs .button.is-outlined:hover {
+  border-color: #3273dc; /* ou la couleur primaire de votre choix */
+  color: #3273dc; /* la même couleur pour le texte au survol */
+}
+.section#projects .button.is-outlined {
+  border-color: transparent;
+  color: #363636; /* couleur du texte pour un look épuré */
+}
+
+/* Augmenter la spécificité pour les éléments de survol */
+.navbar .navbar-item.github-icon:hover,
+.navbar .navbar-item.github-icon:focus {
+    color: inherit !important; /* Maintient la couleur de l'icône inchangée */
+    background: none !important; /* Pas de fond lors du survol */
+}
+
+.success-message-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  text-align: center;
+}
+
+.success-message {
+  font-size: 2em;
+  z-index: 10;
+}
+
+
+section#login .login-container {
+  width: 100%;
+  max-width: 350px;
+
+
+}
+
+section#login .box {
+  padding: 2rem;
+}
+
+section#login {
+  margin-top: 100px;
+
+}
