@@ -18,11 +18,7 @@ Bienvenue sur mon portfolio professionnel, une plateforme dynamique construite a
 - **Portfolio Interactif**: Présentation interactive de projets pour démontrer mes compétences techniques et créatives.
 - **Sécurité et Performance**: Mise en œuvre des meilleures pratiques de sécurité et d'optimisation de performance avec Laravel.
 
-## Installation
-
-Pour installer et exécuter ce projet localement, suivez ces étapes :
-
-### Prérequis
+## Prérequis
 - PHP >= 7.3
 - Composer
 - Node.js et npm
